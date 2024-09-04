@@ -107,3 +107,56 @@ with step1 as (select col1, regexp_replace(col1, '[a-z]', '', 'g') num_only from
 └──────────────────┘
 */
 -- So, our code checks out
+-- let's run it on the full set.
+-- the file is hosted here, and duckdb makes it easy to see the data
+-- https://raw.githubusercontent.com/dhk/2023-advent-of-code/main/day1/aoc2023.input
+select count(*)  from read_csv('https://raw.githubusercontent.com/dhk/2023-advent-of-code/main/day1/aoc2023.input', header=false, columns = {'col1': 'varchar'});
+/*
+1,000 rows - that's correct
+┌──────────────┐
+│ count_star() │
+│    int64     │
+├──────────────┤
+│         1000 │
+└──────────────┘
+ */
+ -- so let me go ahead and instantiate it
+
+
+WITH source_data AS (
+    SELECT *
+    FROM read_csv(
+        'https://raw.githubusercontent.com/dhk/2023-advent-of-code/main/day1/aoc2023.input',
+        header = false,
+        columns = {'col1': 'varchar'}
+    )
+),
+step1 AS (
+    SELECT
+        col1,
+        regexp_replace(col1, '[a-z]', '', 'g') AS num_only
+    FROM source_data
+),
+step2 AS (
+    SELECT
+        col1,
+        LEFT(num_only, 1) || RIGHT(num_only, 1) AS col2
+    FROM step1
+),
+step3 AS (
+    SELECT
+        col1,
+        IFNULL(TRY_CAST(col2 AS INT), 0) AS col2
+    FROM step2
+)
+SELECT
+    SUM(col2) AS day1_result
+FROM step3;
+/*
+┌─────────────┐
+│ day1_result │
+│   int128    │
+├─────────────┤
+│       55208 │
+└─────────────┘
+*/
