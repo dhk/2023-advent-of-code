@@ -9,6 +9,7 @@ Since I'm a SQL-first guy I thought it would be interesting to code the results
 * asking claude/chatgpt to do similar
 
 So, each day will have three solutions
+
 ---
 Hi! I'm [Eric Wastl](http://was.tl/). I make Advent of Code.
 ...
