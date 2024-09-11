@@ -12,7 +12,7 @@ ordinary code
 
 ## Chat Transcript: ChatGPT Gets Flummoxed
 
-`what initially caused you trouble with the file`
+### what initially caused you trouble with the file
 
 The initial issue with the file stemmed from its irregular structure:
 
@@ -24,7 +24,7 @@ The initial issue with the file stemmed from its irregular structure:
 
 1. Once I adapted to reading the file line-by-line and directly filtering lines that started with "Game," the data extraction worked correctly, allowing us to proceed with solving the problem.
 
-`how did you come to realize the nature of the CSV irregularities`
+### how did you come to realize the nature of the CSV irregularities
 I realized the nature of the CSV irregularities during several key moments:
 
 1. Initial CSV Parsing Error: When I first attempted to load the file as a CSV, I received a tokenizing error indicating that some lines had a different number of fields than expected. This error signaled that the file didn’t have a consistent structure in terms of columns, which is a common issue with irregularly formatted CSVs.
@@ -37,7 +37,7 @@ I realized the nature of the CSV irregularities during several key moments:
 
 1. At that point, I decided to handle the file by reading it line-by-line and filtering based on the presence of "Game" at the start of each relevant line. This approach avoided the need for strict column-based parsing and allowed for successful data extraction.
 
-`didn't I tell you that was the problem, with Game XXX: ?`
+### didn't I tell you that was the problem, with Game XXX: ?
 
 Yes, you did mention that the format issue involved the Game XXX: structure, and that the rest of the data should be split by semicolons. I should have adjusted the approach earlier based on that insight. Initially, I tried to load the data as a regular CSV, but once the irregularities became evident, your clarification helped me understand how the data was structured, leading to the line-by-line extraction based on Game XXX:.
 
