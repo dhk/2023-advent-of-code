@@ -4,9 +4,20 @@
 1. However the storage representation flummoxed ChatGPT. See note below
 1. I had to intuit the problem and explain to ChatGPT what to do.
 
-## Claude - WI
+## Claude - pass
+### WHere it did well
+Claude performed well, **but**
+1. it got the answer right the first time: 2449
+when parsing the file, the code correctly understood the file layout
+1. Claude's inline answer was wrong - 2331 rather than 2449. This is probably because Claude, unlike ChatGPT, has no access to the code it generates
+![alt text](day2-claude-wrong.png)
 
-ordinary code
+### Other Variations
+1. Cladue used python, not pandas
+1. Cladue treated the input data as a string rather than reading from a file (I fixed that)
+
+### Extra Credit
+I asked Claude to create an app for me to do this - simple website
 
 ---
 
