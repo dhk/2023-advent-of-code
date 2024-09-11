@@ -1,10 +1,12 @@
 # Day 2 results
 ## ChatGPT - pass
+[chatgpt python](day2-chatgpt.py) - [chatgpt ipynb](2023-chatgpt.ipynb )
 1. Chat GPT understood the problem immediately
 1. However the storage representation flummoxed ChatGPT. See note below
 1. I had to intuit the problem and explain to ChatGPT what to do.
 
 ## Claude - pass
+[claude python](day2-claude.py)
 ### WHere it did well
 Claude performed well, **but**
 1. it got the answer right the first time: 2449
