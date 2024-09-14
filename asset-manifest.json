@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/2023-advent-of-code/static/css/main.e6c13ad2.css",
+    "main.js": "/2023-advent-of-code/static/js/main.28c52d92.js",
+    "static/js/453.10088be0.chunk.js": "/2023-advent-of-code/static/js/453.10088be0.chunk.js",
+    "index.html": "/2023-advent-of-code/index.html",
+    "main.e6c13ad2.css.map": "/2023-advent-of-code/static/css/main.e6c13ad2.css.map",
+    "main.28c52d92.js.map": "/2023-advent-of-code/static/js/main.28c52d92.js.map",
+    "453.10088be0.chunk.js.map": "/2023-advent-of-code/static/js/453.10088be0.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.28c52d92.js"
+  ]
+}
